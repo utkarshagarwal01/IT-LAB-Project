@@ -28,7 +28,10 @@ public partial class Administrator_Default : System.Web.UI.Page
             if (reader["password"].ToString() == TextBox2.Text)
             {
                 Session["AdminEmail"] = TextBox1.Text;
-                Response.Redirect("Notifications.aspx");
+                if (Request.QueryString["Redirect"] != null)
+                    Response.Redirect(Request.QueryString["Redirect"]);
+                else
+                    Response.Redirect("Notifications.aspx");
             }
         }
         finally

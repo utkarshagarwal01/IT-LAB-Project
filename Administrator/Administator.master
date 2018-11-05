@@ -13,24 +13,25 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
-        <nav class="navbar navbar-inverse">
-          <div class="container-fluid">
-            <div class="navbar-header">
-              <a class="navbar-brand" href="#">Administrator</a>
-            </div>
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#">Notifications</a></li>
-              <li><a href="#">New Students</a></li>
-              <li><a href="#">All Students</a></li>
-            </ul>
-          </div>
-        </nav>
-        <br/><br/><br/><br/><br/>
-        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        <div>
+            <nav class="navbar navbar-inverse">
+              <div class="container-fluid">
+                <div class="navbar-header">
+                  <a class="navbar-brand" href="#">Administrator</a>
+                </div>
+                <ul class="nav navbar-nav">
+                  <li id="navli1" runat="server"><a href="Notifications.aspx">Notifications</a></li>
+                  <li id="navli2" runat="server"><a href="NewStudents.aspx">New Students</a></li>
+                  <li id="navli3" runat="server"><a href="AllStudents.aspx">All Students</a></li>
+                </ul>
+                <asp:Button ID="Button1" runat="server" Text="Logout" CssClass="btn btn-default navbar-btn navbar-right" OnClick="Button1_Click"/>
+              </div>
+            </nav>
+            <br/><br/><br/><br/><br/>
+            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
         
-        </asp:ContentPlaceHolder>
-    </div>
-    </form>
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>   
 </body>
 </html>

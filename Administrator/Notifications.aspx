@@ -4,6 +4,10 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <asp:GridView ID="GridView1" runat="server" DataSourceID="SqlDataSource1" ShowHeaderWhenEmpty="true">
+        <Columns>
+            <asp:ButtonField CommandName="Update" Text="Approve" ButtonType="Button" />
+            <asp:ButtonField ButtonType="Button" Text="Disapprove" />
+        </Columns>
         <EmptyDataTemplate>No Record Available</EmptyDataTemplate>
     </asp:GridView>
     <asp:SqlDataSource ID="SqlDataSource1" runat="server"
