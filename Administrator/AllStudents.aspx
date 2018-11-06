@@ -4,7 +4,14 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <asp:GridView ID="GridView1" runat="server" DataSourceID="SqlDataSource1" ShowHeaderWhenEmpty="true" AutoGenerateColumns="false">
-        <EmptyDataTemplate>No Record Available</EmptyDataTemplate>
+        <EmptyDataTemplate>No New Requests</EmptyDataTemplate>
+        <columns>
+            <asp:BoundField HeaderText="Student ID" DataField="Sid"/>
+            <asp:BoundField HeaderText="Student Name" DataField="Sname"/>
+            <asp:BoundField HeaderText="Email" DataField="Smail"/>
+            <asp:BoundField HeaderText="Date of Birth" DataField="Sdob"/>
+            <asp:BoundField HeaderText="Teacher ID" DataField="Tid"/>
+        </columns>
     </asp:GridView>
     <asp:SqlDataSource ID="SqlDataSource1" runat="server"
         ProviderName="System.Data.SqlClient"
