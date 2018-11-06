@@ -43,5 +43,7 @@ public partial class Administrator_Default : System.Web.UI.Page
         {
             conn.Close();
         }
+        TextBox1.Text = "";
+        TextBox2.Text = "";
     }
 }
