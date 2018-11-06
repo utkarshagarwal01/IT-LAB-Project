@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Administrator/Administator.master" UnobtrusiveValidationMode="None" AutoEventWireup="true" CodeFile="NewStudents.aspx.cs" Inherits="Administrator_Default" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Administrator/Administator.master" UnobtrusiveValidationMode="None" AutoEventWireup="true" CodeFile="NewStudents.aspx.cs" Inherits="Administrator_Default" EnableEventValidation="False" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     <link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
@@ -29,14 +29,15 @@
                     <asp:Panel ID="Panel9" runat="server" CssClass="wrap-input100 validate-input">
                         <asp:TextBox ID="TextBox3" runat="server" CssClass="input100"></asp:TextBox>
                         <asp:Label ID="Label6" runat="server" Text="" data-placeholder="E-Mail" CssClass="focus-input100"></asp:Label>
-                        <asp:RequiredFieldValidator id="RequiredFieldValidator3" runat="server" ControlToValidate="TextBox3" ErrorMessage="Please enter Email ID!" ForeColor="Red"/>
+                        <asp:RequiredFieldValidator id="RequiredFieldValidator3" runat="server" ControlToValidate="TextBox3" ErrorMessage="Please enter Email ID!" ForeColor="Red" Display="Dynamic" />
                         <asp:RegularExpressionValidator id="REV1" runat="server" ControlToValidate="TextBox3" ValidationExpression=".+@.+" ErrorMessage="The email is incorrect" ForeColor="Red" ClientValidationFunction="changeColor"/>
                     </asp:Panel>
 
                     <asp:Panel ID="Panel10" runat="server" CssClass="wrap-input100 validate-input">
                         <asp:TextBox ID="TextBox4" runat="server" CssClass="input100"></asp:TextBox>
                         <asp:Label ID="Label7" runat="server" Text="" data-placeholder="Date Of Birth" CssClass="focus-input100"></asp:Label>
-                        <asp:RequiredFieldValidator id="RFV2" runat="server" ControlToValidate="TextBox1" ErrorMessage="Please enter Date Of Birth!" ForeColor="Red"/>
+                        <asp:RequiredFieldValidator id="RFV2" runat="server" ControlToValidate="TextBox4" ErrorMessage="Please enter Date Of Birth!" ForeColor="Red" Display="Dynamic" />
+                        <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToValidate="TextBox4" Operator="DataTypeCheck" ErrorMessage="Please enter in DD/MM/YYYY format." ForeColor="Red" Type="Date"></asp:CompareValidator>
                     </asp:Panel>
                     
                     <asp:Panel ID="Panel6" runat="server" CssClass="wrap-input100 validate-input">
