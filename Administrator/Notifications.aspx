@@ -1,9 +1,14 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Administrator/Administator.master" AutoEventWireup="true" CodeFile="Notifications.aspx.cs" Inherits="Administrator_Default" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+    <style>
+        .alternateDataRow{
+            background-color:lightgrey;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <asp:GridView ID="GridView1" runat="server" DataSourceID="SqlDataSource1" ShowHeaderWhenEmpty="true" AllowSorting="true" AutoGenerateColumns="false">
+    <asp:GridView ID="GridView1" runat="server" DataSourceID="SqlDataSource1" ShowHeaderWhenEmpty="true" AllowSorting="true" AutoGenerateColumns="false" OnRowCommand="GridView1_RowCommand" OnRowDataBound="GridView1_RowDataBound">
         <Columns>
             <asp:BoundField DataField="Sid" HeaderText="Student ID" SortExpression="Sid"/>
             <asp:BoundField DataField="Sname" HeaderText="Student Name"/>
@@ -15,10 +20,10 @@
                 </ItemTemplate>
             </asp:TemplateField>
             
-            <asp:ButtonField CommandName="Update" Text="Approve" ButtonType="Button" HeaderText="Approve"/>
-            <asp:ButtonField ButtonType="Button" Text="Disapprove" HeaderText="Disapprove" />
+            <asp:ButtonField CommandName="Approve" Text="Approve" ButtonType="Button" HeaderText="Approve"/>
+            <asp:ButtonField CommandName="Disapprove" Text="Disapprove" ButtonType="Button" HeaderText="Disapprove" />
         </Columns>
-        <EmptyDataTemplate>No Record Available</EmptyDataTemplate>
+        <EmptyDataTemplate>No Student available for Guardianship.</EmptyDataTemplate>
     </asp:GridView>
     <asp:SqlDataSource ID="SqlDataSource1" runat="server"
         ProviderName="System.Data.SqlClient"
