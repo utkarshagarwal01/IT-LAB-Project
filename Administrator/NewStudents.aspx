@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Administrator/Administator.master" Theme="SkinFile" UnobtrusiveValidationMode="None" AutoEventWireup="true" CodeFile="NewStudents.aspx.cs" Inherits="Administrator_Default" EnableEventValidation="False" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Administrator/Administator.master" Theme="Administrator" UnobtrusiveValidationMode="None" AutoEventWireup="true" CodeFile="NewStudents.aspx.cs" Inherits="Administrator_Default" EnableEventValidation="False" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     <link rel="icon" type="image/png" href="images/icons/favicon.ico"/>

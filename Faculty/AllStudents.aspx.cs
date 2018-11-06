@@ -9,11 +9,6 @@ using System.Web.UI.WebControls;
 
 public partial class Faculty_Default : System.Web.UI.Page
 {
-    protected void Page_Load(object sender, EventArgs e)
-    {
-
-    }
-
     protected void GridView1_RowDataBound(object sender, GridViewRowEventArgs e)
     {
 
@@ -25,8 +20,6 @@ public partial class Faculty_Default : System.Web.UI.Page
             }
             if (Array.IndexOf(requested,Convert.ToInt32(e.Row.Cells[0].Text.Trim())) >= 0 )
             {
-                System.Diagnostics.Debug.WriteLine(" zdsbf"+e.Row.Cells[0].Text.Trim());
-
                 e.Row.Cells[6].Enabled = false;
                 e.Row.Cells[6].Text = "Applied!";
             }
@@ -67,8 +60,6 @@ public partial class Faculty_Default : System.Web.UI.Page
         string connstr = WebConfigurationManager.ConnectionStrings["TG"].ConnectionString;
         SqlConnection conn = new SqlConnection(connstr);
         conn.Open();
-        System.Diagnostics.Debug.WriteLine("Data binding1");
-
         try
         {
             SqlCommand command = new SqlCommand("Select Sid from Request where tid=@tid", conn);
@@ -76,7 +67,6 @@ public partial class Faculty_Default : System.Web.UI.Page
             SqlDataReader reader = command.ExecuteReader();
             while (reader.Read())
             {
-                System.Diagnostics.Debug.WriteLine(reader["Sid"].ToString());
                 requested[index++] = Convert.ToInt32(reader["Sid"].ToString());
             }
         }
