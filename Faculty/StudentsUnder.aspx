@@ -10,8 +10,7 @@
             <asp:BoundField HeaderText="Student Name" DataField="Sname"/>
             <asp:BoundField HeaderText="Email" DataField="Smail"/>
             <asp:BoundField HeaderText="Date of Birth" DataField="Sdob"/>
-            <asp:BoundField HeaderText="Teacher ID" DataField="Tid"/>
-            <asp:ButtonField CommandName="Apply" Text="Apply" ButtonType="Button" HeaderText="Apply for Guardianship"/>
+            
         </columns>
     </asp:GridView>
     <asp:SqlDataSource ID="SqlDataSource1" runat="server"

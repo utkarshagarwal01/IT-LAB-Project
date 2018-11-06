@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Login.aspx.cs" Inherits="Administrator_Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Login.aspx.cs" Theme="SkinFile" Inherits="Administrator_Default" %>
 
 <!DOCTYPE html>
 
@@ -19,7 +19,6 @@
 </head>
 <body>
     <asp:Panel ID="Panel1" runat="server" CssClass="limiter">
-        <asp:Image ID="Image1" runat="server" ImageUrl="~/Faculty/images/classroom.jpg"/>
         <asp:Panel ID="Panel2" runat="server" CssClass="container-login100">
             <asp:Panel ID="Panel3" runat="server" CssClass="wrap-login100">
                 <form id="form1" runat="server" class="login100-form">

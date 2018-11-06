@@ -16,5 +16,5 @@ Default skin template. The following skins are provided as examples only.
 <asp:GridView runat="server" BackColor="White">
     <HeaderStyle BackColor="#A55129" ForeColor="White"/>
 </asp:GridView>
-<asp:TextBox runat="server" Font-Names="Cursive" ForeColor="DarkGray"/>
-<asp:Label runat="server" Font-Names="Copperplate Gothic Light" ForeColor="BlueViolet"/>
+<asp:TextBox runat="server" Font-Names="Cursive" ForeColor="DarkGreen"/>
+<asp:Label runat="server" Font-Names="Copperplate Gothic Light" ForeColor="DarkBlue" Font-Bold="true"/>
