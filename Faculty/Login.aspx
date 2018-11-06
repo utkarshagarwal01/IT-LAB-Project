@@ -43,6 +43,7 @@
                             <asp:Button id="Button1" runat="server" Cssclass="login100-form-btn" Text="Login" BackColor="Turquoise" OnClick="Button1_OnClick"></asp:Button>
                         </asp:Panel>
                     </asp:Panel>
+                    <asp:Label ID="Label6" runat="server" Text="" ForeColor="Red"></asp:Label>
                 </form>
             </asp:Panel>
         </asp:Panel>

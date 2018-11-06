@@ -12,10 +12,10 @@ public partial class Administrator_MasterPage : System.Web.UI.MasterPage
     protected void Page_Load(object sender, EventArgs e)
     {
         string pagename = GetCurrentPageName();
-        /*if(Session["AdminEmail"] == null)
+        if(Session["AdminEmail"] == null)
         { 
             Response.Redirect("Login.aspx?Redirect=" + Server.UrlEncode(pagename));
-        }*/
+        }
         Dictionary<string, HtmlGenericControl> nav_active = new Dictionary<string, HtmlGenericControl>()
         {
             {"Notifications.aspx", navli1 },

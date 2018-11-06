@@ -22,10 +22,12 @@
               <a class="navbar-brand" href="#">Faculty</a>
             </div>
             <ul class="nav navbar-nav">
-              <li class="active"><a href="#">Information</a></li>
-              <li><a href="#">Students Under You</a></li>
-              <li><a href="#">All Students</a></li>
+              <li id="navli1" runat="server"><a href="Information.aspx">Information</a></li>
+              <li id="navli2" runat="server"><a href="StudentsUnder.aspx">Students Under You</a></li>
+              <li id="navli3" runat="server"><a href="AllStudents.aspx">All Students</a></li>
             </ul>
+            <asp:Button ID="Button1" runat="server" Text="Logout" CssClass="btn btn-default navbar-btn navbar-right" OnClick="Button1_Click"/>
+
           </div>
         </nav>
         <br/><br/><br/><br/><br/>

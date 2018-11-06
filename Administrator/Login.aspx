@@ -40,8 +40,10 @@
                         <asp:Panel ID="Panel7" runat="server" CssClass="wrap-login100-form-btn">
                             <asp:Panel ID="Panel8" runat="server" CssClass="login100-form-bgbtn"></asp:Panel>
                             <asp:Button ID="Button1" runat="server" Text="Login" CssClass="login100-form-btn" BackColor="Turquoise" OnClick="Button1_Click" />
-                        </asp:Panel>
+                            </asp:Panel>
                     </asp:Panel>
+                    <asp:Label ID="Label6" runat="server" Text="" ForeColor="Red"></asp:Label>
+                        
                 </form>
             </asp:Panel>
         </asp:Panel>

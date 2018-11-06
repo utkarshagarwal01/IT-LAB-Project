@@ -17,9 +17,10 @@
     <asp:SqlDataSource ID="SqlDataSource1" runat="server"
         ProviderName="System.Data.SqlClient"
         ConnectionString="<%$ ConnectionStrings:TG %>"
-        SelectCommand="Select * from Student where Tid=@id;"></asp:SqlDataSource>
+        SelectCommand="Select * from Student where Tid=@id;">
         <SelectParameters>
             <asp:CookieParameter Name="id" CookieName="Faculty"/>
         </SelectParameters>
+    </asp:SqlDataSource>
 </asp:Content>
 

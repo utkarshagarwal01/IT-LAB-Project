@@ -24,14 +24,18 @@ public partial class Administrator_Default : System.Web.UI.Page
             command.Parameters.AddWithValue("@email", TextBox1.Text);
             conn.Open();
             SqlDataReader reader = command.ExecuteReader();
-            reader.Read();
-            if (reader["password"].ToString() == TextBox2.Text)
+            
+            if (reader.Read() && reader["password"].ToString() == TextBox2.Text)
             {
                 Session["AdminEmail"] = TextBox1.Text;
                 if (Request.QueryString["Redirect"] != null)
                     Response.Redirect(Request.QueryString["Redirect"]);
                 else
                     Response.Redirect("Notifications.aspx");
+            }
+            else
+            {
+                Label6.Text = "Please check your email and password!";
             }
         }
         finally
