@@ -9,7 +9,7 @@
             <asp:BoundField HeaderText="Student ID" DataField="Sid"/>
             <asp:BoundField HeaderText="Student Name" DataField="Sname"/>
             <asp:BoundField HeaderText="Email" DataField="Smail"/>
-            <asp:BoundField HeaderText="Date of Birth" DataField="Sdob"/>
+            <asp:BoundField HeaderText="Date of Birth" DataField="Sdob" DataFormatString="{0:dd/MM/yyyy}"/>
             <asp:BoundField HeaderText="Teacher ID" DataField="Tid" NullDisplayText=" "/>
             <asp:TemplateField HeaderText="Teacher Name">
                 <ItemTemplate>
