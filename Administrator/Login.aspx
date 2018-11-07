@@ -42,6 +42,13 @@
                             <asp:Button ID="Button1" runat="server" Text="Login" CssClass="login100-form-btn" BackColor="Turquoise" OnClick="Button1_Click" />
                             </asp:Panel>
                     </asp:Panel>
+
+                    <asp:Panel ID="Panel9" runat="server" CssClass="container-login100-form-btn">
+                        <asp:Panel ID="Panel10" runat="server" CssClass="wrap-login100-form-btn">
+                            <asp:Panel ID="Panel11" runat="server" CssClass="login100-form-bgbtn"></asp:Panel>
+                            <asp:Button ID="Button2" runat="server" Text="Back" CssClass="login100-form-btn" BackColor="Turquoise" OnClick="Button2_Click" />
+                            </asp:Panel>
+                    </asp:Panel>
                     <asp:Label ID="Label6" runat="server" Text="" ForeColor="Red"></asp:Label>
                         
                 </form>
