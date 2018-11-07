@@ -45,5 +45,10 @@ public partial class Administrator_Default : System.Web.UI.Page
         }
         TextBox1.Text = "";
         TextBox2.Text = "";
+       
+    }
+    protected void Button2_OnClick(object sender, EventArgs e)
+    {
+        Response.Redirect("../LandingPage/index.aspx");
     }
 }
